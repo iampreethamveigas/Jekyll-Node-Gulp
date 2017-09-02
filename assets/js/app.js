@@ -118,4 +118,48 @@ var masterslider_8f99 = new MasterSlider();
 
         			window.masterslider_instances = window.masterslider_instances || [];
         			window.masterslider_instances.push( masterslider_1de4 );
-							
+					
+var yplayer =  videojs("preview-player", {
+					techOrder: ["html5", "flash", "youtube"],
+					ytcontrols:true,
+					height: 264,
+					width: 640,
+					sourceOrder: true
+			}, function(){
+			// Player (this) is initialized and ready.
+	});
+yplayer.playlist([{
+      name: 'BVSC',
+      description: 'old ones!',
+      sources: [
+        { src: 'https://www.youtube.com/watch?v=tGbRZ73NvlY', type: 'video/youtube' }
+      ],
+      thumbnail: [
+        {
+          srcset: 'http://img.youtube.com/vi/tGbRZ73NvlY/0.jpg',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        },
+        {
+          src: 'http://img.youtube.com/vi/tGbRZ73NvlY/0.jpg'
+        }
+      ]
+    }, {
+      name: 'Thunder!',
+      description: 'acdc',
+      sources: [
+        { src: 'https://www.youtube.com/watch?v=ZtOpP4QJa9k', type: 'video/youtube' }
+      ],
+      thumbnail: [
+        {
+          srcset: 'http://img.youtube.com/vi/ZtOpP4QJa9k/0.jpg',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        },
+        {
+          src: 'http://img.youtube.com/vi/ZtOpP4QJa9k/0.jpg'
+        }
+      ]
+    }
+    ]);
+		yplayer.playlistUi();		
