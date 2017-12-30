@@ -20,5 +20,4 @@ This will give you file watching, browser synchronisation, auto-rebuild, CSS inj
 ```shell
 $ gulp
 ```
-tutorial: https://www.youtube.com/watch?v=nY4kQssg3lw
 
